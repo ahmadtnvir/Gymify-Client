@@ -21,13 +21,13 @@ const Home = () => {
           <Count></Count>
         </section>
       </header>
-      <main className="mt-24 space-y-12">
+      <main className="mt-16 space-y-16">
         {/* About Section */}
         <section>
           <About></About>
         </section>
         {/* Service Section */}
-        <section className="service_container">
+        <section className="service_container ">
           <Services></Services>
         </section>
       </main>
