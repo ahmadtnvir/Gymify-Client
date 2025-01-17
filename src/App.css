@@ -1,0 +1,14 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background: url("../../assets/Images/404 BG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
