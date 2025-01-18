@@ -7,6 +7,7 @@ const SectionHeading = ({
   description,
   classes1,
   classes2,
+  textColor,
 }) => {
   return (
     <div>
@@ -19,7 +20,7 @@ const SectionHeading = ({
         style={{
           "text-shadow": "1px 1px 2px #000000",
         }}
-        className="text-4xl lg:text-6xl font-bold text-[#404040] mt-6 mb-4 leading-tight"
+        className={`text-4xl lg:text-6xl font-bold text-[#404040] mt-6 mb-4 leading-tight ${textColor}`}
       >
         {firstTitle}{" "}
         <span

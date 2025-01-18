@@ -6,6 +6,8 @@ import Count from "../Count/Count";
 import About from "../About/About";
 import Services from "../Services/Services";
 import "../Services/services.css";
+import Offer from "../Offer/Offer";
+import "../Offer/offer.css";
 
 const Home = () => {
   return (
@@ -29,6 +31,10 @@ const Home = () => {
         {/* Service Section */}
         <section className="service_container ">
           <Services></Services>
+        </section>
+        {/* Offer Section */}
+        <section className="offer_container">
+          <Offer></Offer>
         </section>
       </main>
     </div>
