@@ -10,6 +10,7 @@ import Offer from "../Offer/Offer";
 import "../Offer/offer.css";
 import "../Class/class.css";
 import Class from "../Class/Class";
+import WorkingProcess from "../../../components/Shared/WorkingProcess/WorkingProcess";
 
 const Home = () => {
   return (
@@ -44,7 +45,7 @@ const Home = () => {
         </section>
         {/* Working Process section */}
         <section>
-          <></>
+          <WorkingProcess></WorkingProcess>
         </section>
       </main>
     </div>
