@@ -1,0 +1,6 @@
+.price_container{
+    background: url("../../../assets/Images/pricing_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

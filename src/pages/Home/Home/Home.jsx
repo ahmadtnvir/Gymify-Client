@@ -11,6 +11,10 @@ import "../Offer/offer.css";
 import "../Class/class.css";
 import Class from "../Class/Class";
 import WorkingProcess from "../../../components/Shared/WorkingProcess/WorkingProcess";
+import "../Pricing/pricing.css";
+import Pricing from "../Pricing/Pricing";
+import Trainer from "../Trainer/Trainer";
+import "../Trainer/trainer.css";
 
 const Home = () => {
   return (
@@ -46,6 +50,14 @@ const Home = () => {
         {/* Working Process section */}
         <section>
           <WorkingProcess></WorkingProcess>
+        </section>
+        {/* Pricing Section */}
+        <section className="price_container">
+          <Pricing></Pricing>
+        </section>
+        {/* Trainer Section */}
+        <section className="trainer_container">
+          <Trainer></Trainer>
         </section>
       </main>
     </div>
