@@ -8,7 +8,7 @@ import icon from "../../../assets/Images/offers_icon.png";
 const Offer = () => {
   const [rating, setRating] = useState(4.5);
   return (
-    <div className="max-w-7xl mx-auto px-4 text-start py-16 ">
+    <div className="max-w-7xl mx-auto px-4 text-start pt-32 pb-16">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
         {/* 1st div */}
         <div>

@@ -18,14 +18,14 @@ const SectionHeading = ({
       </h4>
       <h1
         style={{
-          "text-shadow": "1px 1px 2px #000000",
+          textShadow: "1px 1px 2px #000000",
         }}
         className={`text-4xl lg:text-6xl font-bold text-[#404040] mt-6 mb-4 leading-tight ${textColor}`}
       >
         {firstTitle}{" "}
         <span
           style={{
-            "text-shadow": "none",
+            textShadow: "none",
           }}
           className="text-[#ac1929]"
         >
@@ -33,6 +33,9 @@ const SectionHeading = ({
         </span>
       </h1>
       <p
+        style={{
+          textShadow: "0.5px 0.5px 0.5px #000000",
+        }}
         className={`text-gray-600 text-base lg:text-lg font-medium ${classes2}`}
       >
         {description}

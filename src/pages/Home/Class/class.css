@@ -1,0 +1,13 @@
+.class_container{
+    background: url("../../../assets/Images/class_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service_card {
+    background: url("../../../assets/Images/service_card_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
