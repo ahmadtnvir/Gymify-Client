@@ -16,6 +16,8 @@ import Pricing from "../Pricing/Pricing";
 import Trainer from "../Trainer/Trainer";
 import "../Trainer/trainer.css";
 import Testimonial from "../Testimonial/Testimonial";
+import Blog from "../Blog/Blog";
+// import "../Blog/blog.css"
 
 const Home = () => {
   return (
@@ -63,6 +65,10 @@ const Home = () => {
         {/* Testimonial Section */}
         <section className="scroll-smooth">
           <Testimonial></Testimonial>
+        </section>
+        {/* Blog Section */}
+        <section className="service_container">
+          <Blog></Blog>
         </section>
       </main>
     </div>
