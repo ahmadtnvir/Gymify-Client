@@ -4,6 +4,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import "./class.css";
 import Btn from "../../../components/Btn";
+import { LazyLoadImage } from "zenui-image-react";
 
 const Class = () => {
   return (
@@ -25,11 +26,18 @@ const Class = () => {
         <div>
           {/* Img div */}
           <div className="rounded-3xl bg-transparent w-[90%]">
-            <img
+            {/* <img
             loading="lazy"
               className="rounded-3xl w-full object-cover overflow-hidden"
               src={model}
               alt=""
+            /> */}
+            <LazyLoadImage
+              className="rounded-3xl w-full object-cover overflow-hidden"
+              src={model}
+              alt="Fitness Trainer"
+              placeholderType="effect"
+              effectType="blur"
             />
           </div>
           {/* Content Div */}

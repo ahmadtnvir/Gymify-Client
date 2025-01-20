@@ -82,6 +82,7 @@ import SectionHeading from "../../SectionHeading";
 import step1 from "../../../assets/Images/Steps/1.png";
 import step2 from "../../../assets/Images/Steps/2.png";
 import step3 from "../../../assets/Images/Steps/3.png";
+import { LazyLoadImage } from "zenui-image-react";
 
 const WorkingProcess = () => {
   return (
@@ -92,7 +93,14 @@ const WorkingProcess = () => {
         }}
         className="flex-1 flex justify-center items-end"
       >
-        <img src={model} alt="Trainer Mode" />
+        {/* <img src={model} alt="Trainer Mode" /> */}
+        <LazyLoadImage
+          className=" object-cover "
+          src={model}
+          alt="Fitness Trainer"
+          placeholderType="effect"
+          effectType="blur"
+        />
       </div>
       <div className="flex-1">
         <div className="text-start">
@@ -105,7 +113,14 @@ const WorkingProcess = () => {
         </div>
         <div className="grid grid-cols-3 gap-5 mt-4">
           <div className="space-y-2">
-            <img className="object-cover w-full" src={step1} alt="Step 1" />
+            {/* <img className="object-cover w-full" src={step1} alt="Step 1" /> */}
+            <LazyLoadImage
+              className="object-cover w-full"
+              src={step1}
+              alt="Fitness Trainer"
+              placeholderType="effect"
+              effectType="blur"
+            />
             <div>
               <h3 className="text-xl lg:text-2xl font-bold text-[#ef4f4fdc] leading-tight">
                 Warm-Up
@@ -116,7 +131,14 @@ const WorkingProcess = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <img className="object-cover w-full" src={step2} alt="Step 2" />
+            {/* <img className="object-cover w-full" src={step2} alt="Step 2" /> */}
+            <LazyLoadImage
+              className="object-cover w-full"
+              src={step2}
+              alt="Fitness Trainer"
+              placeholderType="effect"
+              effectType="blur"
+            />
             <div>
               <h3 className="text-xl lg:text-2xl font-bold text-[#ef4f4fdc] leading-tight">
                 Workout
@@ -127,7 +149,14 @@ const WorkingProcess = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <img className="object-cover w-full" src={step3} alt="Step 3" />
+            {/* <img className="object-cover w-full" src={step3} alt="Step 3" /> */}
+            <LazyLoadImage
+              className="object-cover w-full"
+              src={step3}
+              alt="Fitness Trainer"
+              placeholderType="effect"
+              effectType="blur"
+            />
             <div>
               <h3 className="text-xl lg:text-2xl font-bold text-[#ef4f4fdc] leading-tight">
                 Progress

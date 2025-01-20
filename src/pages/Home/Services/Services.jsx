@@ -4,6 +4,7 @@ import { IoFitnessOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Btn from "../../../components/Btn";
 import "./services.css";
+import { LazyLoadImage } from "zenui-image-react";
 const Services = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 text-center py-16">
@@ -26,10 +27,17 @@ const Services = () => {
             <div className="w-[80%] mx-auto space-y-4 relative -top-10">
               {/* Img container */}
               <div className="border-b-2 border-b-[#f33d52] rounded-bl-2xl bg-transparent rounded-t-2xl">
-                <img
+                {/* <img
                   className="w-full object-cover rounded-t-2xl"
                   src={model}
                   alt=""
+                /> */}
+                <LazyLoadImage
+                  className="w-full object-cover rounded-t-2xl"
+                  src={model}
+                  alt="Fitness Trainer"
+                  placeholderType="effect"
+                  effectType="blur"
                 />
                 <div className="flex items-center">
                   <div className="bg-[#ac1929] p-5 rounded-bl-2xl">

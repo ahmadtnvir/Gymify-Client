@@ -2,6 +2,7 @@ import Btn from "../../../components/Btn";
 import SectionHeading from "../../../components/SectionHeading";
 import model from "../../../assets/Images/team_model_.jpg";
 import { IoMdFitness } from "react-icons/io";
+import { LazyLoadImage } from "zenui-image-react";
 
 const Trainer = () => {
   return (
@@ -23,11 +24,18 @@ const Trainer = () => {
         {/* 2nd div */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
           <div className="relative">
-            <img
+            {/* <img
               className="rounded-2xl object-cover w-full h-full"
               loading="lazy"
               src={model}
               alt="Fitness Trainer"
+            /> */}
+            <LazyLoadImage
+              className="rounded-2xl object-cover w-full h-full"
+              src={model}
+              alt="Fitness Trainer"
+              placeholderType="effect"
+              effectType="blur"
             />
 
             <div

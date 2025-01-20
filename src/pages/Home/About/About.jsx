@@ -6,10 +6,11 @@ import aboutModel from "../../../assets/Images/about_model.jpg";
 import video from "../../../assets/Images/about_video.mp4";
 import "./about.css";
 import SectionHeading from "../../../components/SectionHeading";
+import { LazyLoadImage } from "zenui-image-react";
 
 const About = () => {
   return (
-    <div className="min-h-fit max-w-7xl mx-auto px-4 py-10">
+    <div className="min-h-fit max-w-7xl mx-auto px-4 py-10 ">
       {/* Main flex container with responsive stacking */}
       <div className="flex flex-col lg:flex-row gap-10 items-stretch">
         {/* Left Section (Image, Video & Offer Box) */}
@@ -33,10 +34,17 @@ const About = () => {
 
           {/* Image */}
           <div className="flex-1">
-            <img
+            {/* <img
               className="rounded-xl object-cover w-full h-full"
               src={aboutModel}
               alt="About Model"
+            /> */}
+            <LazyLoadImage
+              className="rounded-xl object-cover w-full h-full"
+              src={aboutModel}
+              alt="About Model"
+              placeholderType="effect"
+              effectType="blur"
             />
           </div>
 

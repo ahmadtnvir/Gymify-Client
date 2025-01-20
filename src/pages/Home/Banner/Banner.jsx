@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "zenui-image-react";
 import model from "../../../assets/Images/banner_model.png";
 
 const Banner = () => {
@@ -15,10 +16,17 @@ const Banner = () => {
 
       {/* Image and Content */}
       <div className="relative text-white mt-8">
-        <img
+        {/* <img
           className="w-full h-auto object-cover rounded-lg"
           src={model}
           alt="Fitness Model"
+        /> */}
+        <LazyLoadImage
+          className="w-full h-auto object-cover rounded-lg"
+          src={model}
+          alt="Fitness Model"
+          placeholderType="effect"
+          effectType="blur"
         />
 
         {/* Top Right Content */}

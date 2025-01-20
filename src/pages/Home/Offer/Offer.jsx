@@ -4,6 +4,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import model from "../../../assets/Images/offer_model.png";
 import icon from "../../../assets/Images/offers_icon.png";
+import { LazyLoadImage } from "zenui-image-react";
 
 const Offer = () => {
   const [rating, setRating] = useState(4.5);
@@ -39,10 +40,17 @@ const Offer = () => {
         </div>
         {/* 2nd div */}
         <div className="flex justify-center items-center">
-          <img
+          {/* <img
             className="object-cover w-full"
             src={model}
             alt="Fitness Training"
+          /> */}
+          <LazyLoadImage
+            className="object-cover w-full"
+            src={model}
+            alt="Fitness Trainer"
+            placeholderType="effect"
+            effectType="blur"
           />
         </div>
         {/* 3rd div */}
