@@ -3,7 +3,11 @@ import registerLottieAnimation from "../../assets/lottie/registration.json";
 import Btn from "../../components/Btn";
 import { Link } from "react-router-dom";
 import RouteNaming from "../../components/RouteNaming";
+import useAuth from "../../Hooks/useAuth";
 const SignUp = () => {
+  // TODO: Create user authentication
+  // const {} = useAuth();
+  
   return (
     <div className="hero main-container min-h-screen text-white">
       <RouteNaming name={"Sign Up"}></RouteNaming>
