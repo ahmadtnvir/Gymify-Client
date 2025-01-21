@@ -17,6 +17,7 @@ import Trainer from "../Trainer/Trainer";
 import "../Trainer/trainer.css";
 import Testimonial from "../Testimonial/Testimonial";
 import Blog from "../Blog/Blog";
+import Footer from "../../../components/Footer/Footer";
 // import "../Blog/blog.css"
 
 const Home = () => {

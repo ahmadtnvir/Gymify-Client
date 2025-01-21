@@ -60,14 +60,14 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
 <!--! Navbar🧭 -->
 <!-- 
     Your website should have a navbar with the following information:
-    Website name/logo.
-    Home page.
-    All Trainer Page.
-    All Classes page.
+    ✅Website name/logo.
+    ✅Home page.
+    ✅All Trainer Page.
+    ✅All Classes page.
     Conditional Dashboard.
     Community/Forums page.
-    Conditional login/register.
-     User Profile.
+    ✅Conditional login/register.
+    User Profile.
     Note: The User profile and Dashboard on the navbar will be conditional based on user login. If the user is logged in, the navbar will show the profile picture, dashboard, and logout button; otherwise, it will show the Login button. 
     Login and registration systems  
 -->
@@ -96,24 +96,41 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
 <!-- 👉 
     ✅Banner section: A slider/banner/ a meaningful section. 
     ✅Inside the banner will be a Heading Title, a Short Description, and 
-    a button that will redirect the user to the classes page.
+    ❌a button that will redirect the user to the classes page.
 -->
-👉 Featured section: Create a featured section highlighting key website features through a series of cards. Each card should include a concise title, an engaging description, and an icon or image visually representing the feature. 
-💡For ideas search google.
+<!-- 👉 
+    ✅Featured section / Our Services: Create a featured section highlighting key website features through a series of cards. 
+    ✅Each card should include a concise title, an engaging description, and an icon or image visually representing the feature. 
+    💡For ideas search google. 
+-->
 
-👉 About section: this section will have some info about the organization. You can use any type of layout or design but try to match it with your whole website design.
+<!-- 👉 
+    ✅About section: this section will have some info about the organization. 
+    ✅You can use any type of layout or design but try to match it with your whole website design. 
+-->
 
-👉 Featured classes: Create a "Featured Classes" section showcasing the top six most booked classes, based on their total booking counts. Each class should be displayed with a title, a brief description, and the total number of bookings to highlight its popularity. All data will be from the database.
-📝 Use the backend and MongoDB $sort method to filter data based on the total booking number. For that, you must count the total booked each time a user booked a class.
+<!-- 👉 
+    ✅Featured classes: Create a "Featured Classes" section showcasing the top six most booked classes, based on their total booking counts. 
+    Each class should be displayed with a title, a brief description, and the total number of bookings to highlight its popularity. All data will be from the database.
+    📝 Use the backend and MongoDB $sort method to filter data based on the total booking number. For that, you must count the total booked each time a user booked a class. 
+-->
 
-👉 Testimonials or Reviews: Implement a carousel slider that displays three review cards simultaneously. This slider should be capable of cycling through all the reviews submitted by a member. The slider will include functionality to navigate(next, prev) through the reviews smoothly, allowing users to view each one in succession. This will be a dynamic section and the user can add reviews from his dashboard.   See this Design demo 
-🚩See the Dashboard member part for more info. 👇
+<!-- 👉 
+    Testimonials or Reviews: Implement a carousel slider that displays three review cards simultaneously. This slider should be capable of cycling through all the reviews submitted by a member. The slider will include functionality to navigate(next, prev) through the reviews smoothly, allowing users to view each one in succession. This will be a dynamic section and the user can add reviews from his dashboard.   See this Design demo 
+    🚩See the Dashboard member part for more info. 👇 
+-->
 
-👉 Latest Community/Forum posts: show recent six(6) community forum posts or articles. Ensure to include direct links for further reading or exploring the blog section. Aim to feature 4-6 posts in total. 
+<!-- 👉 
+    Latest Community/Forum posts: show recent six(6) community forum posts or articles. Ensure to include direct links for further reading or exploring the blog section. Aim to feature 4-6 posts in total.  
+-->
 
-👉 Newsletter section: Design a subscription section that includes fields for the user's name and email address, along with a "Subscribe Now" button. When the "Subscribe Now" button is clicked, the user's information should be saved to the database. Ensure that this process does not require users to log in to subscribe to the newsletter.
+<!-- 👉 
+    Newsletter section: Design a subscription section that includes fields for the user's name and email address, along with a "Subscribe Now" button. When the "Subscribe Now" button is clicked, the user's information should be saved to the database. Ensure that this process does not require users to log in to subscribe to the newsletter. 
+-->
 
-👉 Team section: Display at least three trainer profiles, each accompanied by key information. Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo. 
+<!-- 👉 
+    Team section: Display at least three trainer profiles, each accompanied by key information. Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo.  
+-->
 
 All Trainers Page👯(Public) 
 👉 Trainer Section: Show all the Trainer profiles. Each Card contains the following info.
