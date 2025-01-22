@@ -5,14 +5,21 @@ import RouteNaming from "../../components/RouteNaming";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 const SignUp = () => {
   const { createUser, updateUser, setUser, setLoading, googleSigninUser } =
     useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+    reset,
     // watch,
     formState: { errors },
   } = useForm();
@@ -24,6 +31,7 @@ const SignUp = () => {
         updateUser(signUpUser.username, signUpUser.photo).then(() => {
           setUser(currentUser);
           setLoading(false);
+          reset();
           location?.state ? navigate(location.state) : navigate("/");
           toast.success("Sign up successfully!");
         });
@@ -36,11 +44,6 @@ const SignUp = () => {
     googleSigninUser()
       .then((result) => {
         const currentUserGoogle = result.user;
-        // console.log(
-        //   currentUserGoogle?.displayName,
-        //   currentUserGoogle?.photoURL
-        // );
-        // console.log(currentUserGoogle);
         updateUser(
           currentUserGoogle?.displayName,
           currentUserGoogle?.photoURL
@@ -52,14 +55,12 @@ const SignUp = () => {
         });
       })
       .catch((err) => {
-        // console.error(err.message);
         toast.error(err.message);
       });
   };
   return (
     <div className="hero main-container min-h-screen text-white">
       <RouteNaming name={"Sign Up"}></RouteNaming>
-      {/* <div className="hero-content flex-col"> */}
       <div className="hero-content flex-col lg:flex-row">
         <div className="text-center lg:text-left flex-1">
           <Lottie animationData={registerLottieAnimation} loop={true} />
@@ -120,16 +121,37 @@ const SignUp = () => {
                 <label htmlFor="password" className="block text-gray-400">
                   Password
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
-                  {...register("password", { required: true })}
-                />
-                {errors.password && (
+                <div className="flex items-center relative ">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    placeholder={showPassword ? "Password" : "******"}
+                    className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                    {...register("password", {
+                      required: true,
+                      pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                    })}
+                  />
+                  <span
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 cursor-pointer"
+                  >
+                    {showPassword ? (
+                      <FaEyeSlash className="text-[#ac1929] text-xl" />
+                    ) : (
+                      <FaEye className="text-[#ac1929] text-xl" />
+                    )}
+                  </span>
+                </div>
+                {errors.password?.type === "required" && (
                   <span className="text-[#ac1929]">This field is required</span>
+                )}
+                {errors.password?.type === "pattern" && (
+                  <span className="text-[#ac1929]">
+                    Password must be at least 6 characters long and include at
+                    least one uppercase and one lowercase letter.
+                  </span>
                 )}
               </div>
               <button className="btn btn-block border-none mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">

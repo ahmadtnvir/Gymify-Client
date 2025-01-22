@@ -64,32 +64,36 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     ✅Home page.
     ✅All Trainer Page.
     ✅All Classes page.
-    Conditional Dashboard.
-    Community/Forums page.
+    ✅Conditional Dashboard.
+    ✅Community/Forums page.
     ✅Conditional login/register.
-    User Profile.
-    Note: The User profile and Dashboard on the navbar will be conditional based on user login. If the user is logged in, the navbar will show the profile picture, dashboard, and logout button; otherwise, it will show the Login button. 
-    Login and registration systems  
+    ✅User Profile.
+    ✅Note: The User profile and Dashboard on the navbar will be conditional based on user login. If the user is logged in, the navbar ✅will show the profile picture, dashboard, and logout button; otherwise, it will show the Login button. 
+    ✅Login and registration systems  
 -->
 <!-- TODO -->
 <!--! Registration Page ➕ -->
 <!-- 
-    Create a Registration page will have the Email/Password form having the following fields:
-    Name
-    Email
-    Photo URL
-    Password
-    📝Note: Make sure you add the user information in a MongoDB collection after successful registration and use them as per your need.
+    ✅Create a Registration page will have the Email/Password form having the following fields:
+    ✅Name
+    ✅Email
+    ✅Photo URL
+    ✅Password
+
+    ❌📝Note: Make sure you add the user information in a MongoDB collection after successful registration and use them as per your need.
     ⚠️ Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result. 
 -->
 <!-- TODO -->
 <!--! Login Page ➕ -->
 <!-- 
-    When a user clicks on the login button, they will be redirected to the login page which has the following:
-    Email/Password
-    A Social Login System
-    A link that will help the user toggle the login and registration page
-    📝Note: Both Registration and Login pages, display relevant Error (🛑) messages when necessary. Also, A user by default will get the (role: member) when he/she registers or sign in with a popup. 
+    ✅When a user clicks on the login button, they will be redirected to the login page which has the following:
+    ✅Email/Password
+    ✅A Social Login System
+    ✅A link that will help the user toggle the login and registration page
+
+    ✅📝Note: Both Registration and Login pages, display relevant Error (🛑) messages when necessary. 
+    
+    ❌Also, A user by default will get the (role: member) when he/she registers or sign in with a popup. 
 -->
 <!-- TODO -->
 <!--! Homepage 🏠 -->

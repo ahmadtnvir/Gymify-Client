@@ -3,7 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { FiUser } from "react-icons/fi";
 import { IoIosArrowUp } from "react-icons/io";
-import { IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { TbLogout2 } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
@@ -214,8 +214,8 @@ const Navbar = () => {
                 View Profile
               </p>
               <p className="flex items-center gap-3 text-gray-300 hover:text-white hover:bg-[#ac1929] px-3 py-2 rounded-lg cursor-pointer transition-colors duration-200">
-                <IoSettingsOutline className="text-lg" />
-                Settings
+                <MdOutlineSpaceDashboard className="text-lg" />
+                Dashboard
               </p>
               <div className="mt-2 border-t border-gray-700 pt-2">
                 <p

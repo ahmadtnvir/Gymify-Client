@@ -1,84 +1,125 @@
 import Lottie from "lottie-react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginLottieAnimation from "../../assets/lottie/login.json";
-import Btn from "../../components/Btn";
-import { Link } from "react-router-dom";
 import RouteNaming from "../../components/RouteNaming";
+import useAuth from "../../Hooks/useAuth";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
+
 const SignIn = () => {
+  const { signinUser, updateUser, setUser, setLoading, googleSigninUser } =
+    useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  console.log(showPassword);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    // watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const signInUser = data;
+    signinUser(signInUser.email, signInUser.password)
+      .then((result) => {
+        const currentUser = result.user;
+        setUser(currentUser);
+        setLoading(false);
+        reset();
+        location?.state ? navigate(location.state) : navigate("/");
+        toast.success("Sign in successfully!");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
+  const handleGoogleSignIn = () => {
+    googleSigninUser()
+      .then((result) => {
+        const currentUserGoogle = result.user;
+        updateUser(
+          currentUserGoogle?.displayName,
+          currentUserGoogle?.photoURL
+        ).then(() => {
+          setUser(currentUserGoogle);
+          setLoading(false);
+          location?.state ? navigate(location.state) : navigate("/");
+          toast.success("Sign in successfully!");
+        });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
   return (
     <div className="hero main-container min-h-screen text-white">
       <RouteNaming name={"Sign In"}></RouteNaming>
-      {/* <div className="hero-content flex-col"> */}
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left flex-1">
           <Lottie animationData={loginLottieAnimation} loop={true} />
         </div>
         <div className="flex-1">
-          {/* <h1 className="text-5xl font-bold mb-3">Login now!</h1>
-          <div className="card bg-[#322f30] w-full max-w-sm shrink-0 shadow-2xl">
-            <form className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
+          <div className="w-full min-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 ">
+            <h1 className="text-5xl font-bold text-center mb-5">Sign In</h1>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <div className="space-y-1 text-sm">
+                <label htmlFor="email" className="block text-gray-400">
+                  Email
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
-              </div>
-            </form>
-          </div> */}
-          <div className="w-full min-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 ">
-            <h1 className="text-5xl font-bold text-center mb-5">Sign In</h1>
-            <form noValidate="" action="" className="space-y-6">
-              <div className="space-y-1 text-sm">
-                <label htmlFor="username" className="block text-gray-400">
-                  Username
-                </label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  placeholder="Username"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
                   className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                  {...register("email", { required: true })}
                 />
+                {errors.email && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
               </div>
               <div className="space-y-1 text-sm">
                 <label htmlFor="password" className="block text-gray-400">
                   Password
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
-                />
+                <div className="flex items-center relative ">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    placeholder={showPassword ? "Password" : "******"}
+                    className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                    {...register("password", { required: true })}
+                  />
+                  <span
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 cursor-pointer"
+                  >
+                    {showPassword ? (
+                      <FaEyeSlash className="text-[#ac1929] text-xl" />
+                    ) : (
+                      <FaEye className="text-[#ac1929] text-xl" />
+                    )}
+                  </span>
+                </div>
+                {errors.password && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
+                {/* TODO: Implement after receiving the assignment result */}
                 <div className="flex justify-end text-xs text-gray-400">
                   <a rel="noopener noreferrer" href="#">
                     Forgot Password?
                   </a>
                 </div>
               </div>
-              <Btn
-                content={"Sign In"}
-                classes={"block w-full p-3 flex justify-center items-center"}
-              ></Btn>
+              <button className="btn btn-block border-none mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">
+                Sign In
+              </button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
               <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -89,6 +130,7 @@ const SignIn = () => {
             </div>
             <div className="flex justify-center space-x-4">
               <button
+                onClick={handleGoogleSignIn}
                 aria-label="Log in with Google"
                 className="p-3 rounded-sm"
               >
@@ -129,8 +171,6 @@ const SignIn = () => {
               Don't have an account?{" "}
               <Link
                 to={"/signup"}
-                // rel="noopener noreferrer"
-                // href="#"
                 className="underline text-gray-100 font-semibold"
               >
                 Sign up
