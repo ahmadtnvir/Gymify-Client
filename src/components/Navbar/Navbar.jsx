@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-// react icons
-import { IoIosArrowUp } from "react-icons/io";
-import { TbLogout2 } from "react-icons/tb";
+import toast from "react-hot-toast";
 import { FiUser } from "react-icons/fi";
+import { IoIosArrowUp } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
+import { TbLogout2 } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 import logo from "../../assets/Images/Nav-Logo2.png";
 import Btn from "../Btn";
 
 const Navbar = () => {
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+  const { user, signoutUser } = useAuth();
+  // TODO: Theme controller functionality
   // const [theme, setTheme] = useState("light");
 
   // useEffect(() => {
@@ -32,7 +35,6 @@ const Navbar = () => {
         <NavLink
           to={"/"}
           className="hover:text-white transition-all duration-200"
-          // activeClassName="text-white border-b-2 border-[#ac1929]"
         >
           Home
         </NavLink>
@@ -41,7 +43,6 @@ const Navbar = () => {
         <NavLink
           to={"/allTrainer"}
           className="hover:text-white transition-all duration-200"
-          // activeClassName="text-white border-b-2 border-[#ac1929]"
         >
           All Trainer
         </NavLink>
@@ -50,7 +51,6 @@ const Navbar = () => {
         <NavLink
           to={"/allClasses"}
           className="hover:text-white transition-all duration-200"
-          // activeClassName="text-white border-b-2 border-[#ac1929]"
         >
           All Classes
         </NavLink>
@@ -59,11 +59,11 @@ const Navbar = () => {
         <NavLink
           to={"/community"}
           className="hover:text-white transition-all duration-200"
-          // activeClassName="text-white border-b-2 border-[#ac1929]"
         >
           Community
         </NavLink>
       </li>
+      {/* TODO: Theme controller */}
       {/* <li>
         <label className="grid cursor-pointer place-items-center">
           <input
@@ -104,6 +104,16 @@ const Navbar = () => {
       </li> */}
     </>
   );
+
+  const handleSignOut = () => {
+    signoutUser()
+      .then(() => {
+        toast.success("Sign out successfully!");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
 
   return (
     <div className="sticky top-0 z-50 bg-gradient-to-r from-black via-gray-900 to-black shadow-lg">
@@ -167,22 +177,16 @@ const Navbar = () => {
 
         {/* Navbar End */}
         <div className="navbar-end">
-          <div className="flex justify-between items-center gap-3">
-            <Link to={"/signin"}>
-              <Btn content={"Sign In"}></Btn>
-            </Link>
-            <Link to={"/signup"}>
-              <Btn content={"Sign Up"}></Btn>
-            </Link>
-          </div>
           <div
-            className="hidden flex items-center gap-3 cursor-pointer relative"
+            className={` ${
+              user ? "flex" : "hidden"
+            }  items-center gap-3 cursor-pointer relative`}
             onClick={() => setAccountMenuOpen(!accountMenuOpen)}
           >
             {/* Avatar with online status */}
             <div className="relative">
               <img
-                src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1724605498~exp=1724609098~hmac=7f6fc106bae2c17b0c93af1b2e5483d9d8368f3e51284aaec7c7d50590d2bae5&w=740"
+                src={user?.photoURL}
                 alt="avatar"
                 className="w-10 h-10 rounded-full object-cover border-2 border-[#ac1929] shadow-md"
               />
@@ -191,7 +195,7 @@ const Navbar = () => {
 
             {/* User name */}
             <h1 className="text-base font-semibold text-gray-300 sm:block hidden">
-              Dhon Deo
+              {user?.displayName}
             </h1>
 
             {/* Dropdown menu */}
@@ -202,6 +206,9 @@ const Navbar = () => {
                   : "translate-y-2 opacity-0 z-[-1]"
               } bg-black rounded-xl shadow-lg absolute top-[60px] right-0 w-48 p-3 flex flex-col transition-all duration-300 ease-in-out border border-[#ac1929]`}
             >
+              <p className="text-gray-300 cursor-default py-2 mb-2 border-b border-gray-700">
+                {user?.email}
+              </p>
               <p className="flex items-center gap-3 text-gray-300 hover:text-white hover:bg-[#ac1929] px-3 py-2 rounded-lg cursor-pointer transition-colors duration-200">
                 <FiUser className="text-lg" />
                 View Profile
@@ -211,7 +218,10 @@ const Navbar = () => {
                 Settings
               </p>
               <div className="mt-2 border-t border-gray-700 pt-2">
-                <p className="flex items-center gap-3 text-red-500 hover:text-white hover:bg-red-500 px-3 py-2 rounded-lg cursor-pointer transition-colors duration-200">
+                <p
+                  onClick={handleSignOut}
+                  className="flex items-center gap-3 text-red-500 hover:text-white hover:bg-red-500 px-3 py-2 rounded-lg cursor-pointer transition-colors duration-200"
+                >
                   <TbLogout2 className="text-lg" />
                   Logout
                 </p>
@@ -224,6 +234,18 @@ const Navbar = () => {
                 accountMenuOpen ? "rotate-0" : "rotate-180"
               } transition-transform duration-300 text-gray-300 text-lg`}
             />
+          </div>
+          <div
+            className={`${
+              user ? "hidden" : "flex"
+            }  justify-between items-center gap-3`}
+          >
+            <Link to={"/signin"}>
+              <Btn content={"Sign In"}></Btn>
+            </Link>
+            <Link to={"/signup"}>
+              <Btn content={"Sign Up"}></Btn>
+            </Link>
           </div>
         </div>
       </div>

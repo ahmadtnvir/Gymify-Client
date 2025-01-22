@@ -1,13 +1,61 @@
 import Lottie from "lottie-react";
 import registerLottieAnimation from "../../assets/lottie/registration.json";
-import Btn from "../../components/Btn";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import RouteNaming from "../../components/RouteNaming";
 import useAuth from "../../Hooks/useAuth";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 const SignUp = () => {
-  // TODO: Create user authentication
-  // const {} = useAuth();
-  
+  const { createUser, updateUser, setUser, setLoading, googleSigninUser } =
+    useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    // watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const signUpUser = data;
+    createUser(signUpUser.email, signUpUser.password)
+      .then((res) => {
+        const currentUser = res.user;
+        updateUser(signUpUser.username, signUpUser.photo).then(() => {
+          setUser(currentUser);
+          setLoading(false);
+          location?.state ? navigate(location.state) : navigate("/");
+          toast.success("Sign up successfully!");
+        });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
+  const handleGoogle = () => {
+    googleSigninUser()
+      .then((result) => {
+        const currentUserGoogle = result.user;
+        // console.log(
+        //   currentUserGoogle?.displayName,
+        //   currentUserGoogle?.photoURL
+        // );
+        // console.log(currentUserGoogle);
+        updateUser(
+          currentUserGoogle?.displayName,
+          currentUserGoogle?.photoURL
+        ).then(() => {
+          setUser(currentUserGoogle);
+          setLoading(false);
+          location?.state ? navigate(location.state) : navigate("/");
+          toast.success("Sign up successfully!");
+        });
+      })
+      .catch((err) => {
+        // console.error(err.message);
+        toast.error(err.message);
+      });
+  };
   return (
     <div className="hero main-container min-h-screen text-white">
       <RouteNaming name={"Sign Up"}></RouteNaming>
@@ -17,39 +65,9 @@ const SignUp = () => {
           <Lottie animationData={registerLottieAnimation} loop={true} />
         </div>
         <div className="flex-1">
-          {/* <h1 className="text-5xl font-bold mb-3">Login now!</h1>
-          <div className="card bg-[#322f30] w-full max-w-sm shrink-0 shadow-2xl">
-            <form className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="email"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
-              </div>
-            </form>
-          </div> */}
           <div className="w-full min-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 ">
             <h1 className="text-5xl font-bold text-center mb-5">Sign Up</h1>
-            <form noValidate="" action="" className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="space-y-1 text-sm">
                 <label htmlFor="username" className="block text-gray-400">
                   Username
@@ -60,7 +78,43 @@ const SignUp = () => {
                   id="username"
                   placeholder="Username"
                   className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                  {...register("username", { required: true })}
                 />
+                {errors.username && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
+              </div>
+              <div className="space-y-1 text-sm">
+                <label htmlFor="email" className="block text-gray-400">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                  {...register("email", { required: true })}
+                />
+                {errors.email && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
+              </div>
+              <div className="space-y-1 text-sm">
+                <label htmlFor="" className="block text-gray-400">
+                  Photo Url
+                </label>
+                <input
+                  type="url"
+                  name="photo"
+                  id="photo"
+                  placeholder="Photo Url"
+                  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                  {...register("photo", { required: true })}
+                />
+                {errors.photo && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
               </div>
               <div className="space-y-1 text-sm">
                 <label htmlFor="password" className="block text-gray-400">
@@ -72,17 +126,15 @@ const SignUp = () => {
                   id="password"
                   placeholder="Password"
                   className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-200"
+                  {...register("password", { required: true })}
                 />
-                <div className="flex justify-end text-xs text-gray-400">
-                  <a rel="noopener noreferrer" href="#">
-                    Forgot Password?
-                  </a>
-                </div>
+                {errors.password && (
+                  <span className="text-[#ac1929]">This field is required</span>
+                )}
               </div>
-              <Btn
-                content={"Sign Up"}
-                classes={"block w-full p-3 flex justify-center items-center"}
-              ></Btn>
+              <button className="btn btn-block border-none mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">
+                Sign Up
+              </button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
               <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -93,6 +145,7 @@ const SignUp = () => {
             </div>
             <div className="flex justify-center space-x-4">
               <button
+                onClick={handleGoogle}
                 aria-label="Log in with Google"
                 className="p-3 rounded-sm"
               >
