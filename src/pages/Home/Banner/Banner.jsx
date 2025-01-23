@@ -1,5 +1,6 @@
 import { LazyLoadImage } from "zenui-image-react";
 import model from "../../../assets/Images/banner_model.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -43,14 +44,16 @@ const Banner = () => {
           </div>
           <div className="flex items-center">
             <div className="h-6 w-6 bg-white p-1 rounded-full">
-              <div className="bg-[#ac1929] rounded-full w-full h-full p-1">
+              <div className="bg-[#ac1929] rounded-full w-full h-full p-2">
                 <div className="bg-white rounded-full w-full h-full"></div>
               </div>
             </div>
             <div className="border w-32 sm:w-40 lg:w-80"></div>
-            <button className="btn bg-transparent text-white hover:bg-[#ac1929] rounded-full px-4 py-2">
-              Join Us
-            </button>
+            <Link to={"/allClasses"}>
+              <button className="btn bg-transparent text-white hover:bg-[#ac1929] rounded-full px-4 py-2">
+                Join Classes
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -59,7 +62,7 @@ const Banner = () => {
           <div className="flex items-center">
             <div className="border w-28 sm:w-36 lg:w-96"></div>
             <div className="h-6 w-6 bg-white p-1 rounded-full">
-              <div className="bg-[#ac1929] rounded-full w-full h-full p-1">
+              <div className="bg-[#ac1929] rounded-full w-full h-full p-2">
                 <div className="bg-white rounded-full w-full h-full"></div>
               </div>
             </div>
