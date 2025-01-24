@@ -24,7 +24,7 @@ const Testimonial = () => {
   });
   if (isLoading)
     return (
-      <div className="h-full w-full flex justify-center items-center">
+      <div className="min-h-screen w-full flex justify-center items-center">
         <div className="w-7 h-7 animate-[ping_2s_linear_infinite] rounded-full border-2 border-[#ac1929] flex items-center justify-center">
           <div className="w-5 h-5 animate-[ping_2s_linear_3s_infinite] rounded-full border-2 border-[#ac1929]"></div>
         </div>
@@ -32,12 +32,12 @@ const Testimonial = () => {
     );
   if (error)
     return (
-      <p
-        className="h-full w-full flex justify-center items-center
+      <div
+        className="min-h-screen w-full flex justify-center items-center text-6xl text-[#ac1929] font-bold
       "
       >
         No Data Found...
-      </p>
+      </div>
     );
   const settings = {
     dots: true,

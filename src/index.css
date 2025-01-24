@@ -28,3 +28,11 @@ body {
   background: #f98080 !important;
   /* background: rgba(255, 87, 51, 0.8) !important; */
 }
+
+.card_content_bg {
+  background: url("./assets/Images/service_card_bg.png");
+  /* background: url("../../../assets/Images/service_card_bg.png"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

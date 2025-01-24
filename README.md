@@ -121,7 +121,7 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     ? For that, you must count the total booked each time a user booked a class.
 -->
 
-<!-- 👉👉👉
+<!-- 👉
     ✅Testimonials or Reviews: Implement a carousel slider that displays three review cards simultaneously. 
     ✅This slider should be capable of cycling through all the reviews submitted by a member. 
     ✅The slider will include functionality to navigate(next, prev) through the reviews smoothly, allowing users to view each one in succession. 
@@ -131,15 +131,18 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
 -->
 
 <!-- 👉
-    Latest Community/Forum posts: show recent six(6) community forum posts or articles. Ensure to include direct links for further reading or exploring the blog section. Aim to feature 4-6 posts in total.
+    ✅Latest Community/Forum posts: show recent six(6) community forum posts or articles. 
+    ✅Ensure to include direct links for further reading or exploring the blog section. 
+    ✅Aim to feature 4-6 posts in total.
 -->
 
 <!-- 👉
     Newsletter section: Design a subscription section that includes fields for the user's name and email address, along with a "Subscribe Now" button. When the "Subscribe Now" button is clicked, the user's information should be saved to the database. Ensure that this process does not require users to log in to subscribe to the newsletter.
 -->
 
-<!-- 👉
-    Team section: Display at least three trainer profiles, each accompanied by key information. Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo.
+<!-- 👉👉👉
+    Team section: Display at least three trainer profiles, each accompanied by key information. 
+    Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo.
 -->
 
 All Trainers Page👯(Public)

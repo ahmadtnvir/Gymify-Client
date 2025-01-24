@@ -1,13 +1,11 @@
-import { FaRegCalendarAlt } from "react-icons/fa";
+import { useQuery } from "@tanstack/react-query";
 import { FaArrowRight } from "react-icons/fa6";
 import model from "../../../assets/Images/class_model.jpg";
+import booking from "../../../assets/Images/icon-booking.png";
 import Btn from "../../../components/Btn";
 import SectionHeading from "../../../components/SectionHeading";
-import "./class.css";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import booking from "../../../assets/Images/icon-booking.png";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import "./class.css";
 
 const Class = () => {
   const axiosPublic = useAxiosPublic();
@@ -25,7 +23,7 @@ const Class = () => {
   });
   if (isLoading)
     return (
-      <div className="h-full w-full flex justify-center items-center">
+      <div className="min-h-screen w-full flex justify-center items-center">
         <div className="w-7 h-7 animate-[ping_2s_linear_infinite] rounded-full border-2 border-[#ac1929] flex items-center justify-center">
           <div className="w-5 h-5 animate-[ping_2s_linear_3s_infinite] rounded-full border-2 border-[#ac1929]"></div>
         </div>
@@ -34,7 +32,7 @@ const Class = () => {
   if (error)
     return (
       <p
-        className="h-full w-full flex justify-center items-center
+        className="min-h-screen w-full flex justify-center items-center text-6xl text-[#ac1929] font-bold
       "
       >
         No Data Found...
