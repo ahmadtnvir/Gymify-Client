@@ -102,7 +102,7 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     ✅Inside the banner will be a Heading Title, a Short Description, and
     ✅a button that will redirect the user to the classes page.
 -->
-<!-- 👉👉👉 
+<!-- 👉 
     ✅Featured section / Our Services: Create a featured section highlighting key website features through a series of cards.
     ✅Each card should include a concise title, an engaging description, and an icon or image visually representing the feature.
     💡For ideas search google.
@@ -114,10 +114,11 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     ✅You can use any type of layout or design but try to match it with your whole website design.
 -->
 
-<!-- 👉
+<!-- 👉👉👉
     ✅Featured classes: Create a "Featured Classes" section showcasing the top six most booked classes, based on their total booking counts.
-    Each class should be displayed with a title, a brief description, and the total number of bookings to highlight its popularity. All data will be from the database.
-    📝 Use the backend and MongoDB $sort method to filter data based on the total booking number. For that, you must count the total booked each time a user booked a class.
+    ✅Each class should be displayed with a title, a brief description, and the total number of bookings to highlight its popularity. ✅All data will be from the database.
+    ✅📝 Use the backend and MongoDB $sort method to filter data based on the total booking number. 
+    ? For that, you must count the total booked each time a user booked a class.
 -->
 
 <!-- 👉

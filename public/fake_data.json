@@ -1,0 +1,511 @@
+[
+  {
+    "title": "HIIT Power Burn",
+    "description": "High-Intensity Interval Training to maximize fat burn and endurance.",
+    "totalBookings": 152,
+    "category": "Cardio",
+    "trainer": {
+      "name": "Emily Carter",
+      "experience": "5 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "45 min",
+    "roomSummary": "Spacious, well-ventilated room with high-quality mats and equipment.",
+    "bulletPoints": [
+      "Burns maximum calories in a short time.",
+      "Boosts metabolism and endurance.",
+      "Combination of strength and cardio.",
+      "Scalable for all fitness levels."
+    ],
+    "clients": [
+      {
+        "name": "John Doe",
+        "feedback": "Great class! I felt the burn but loved every second of it.",
+        "rating": 5
+      },
+      {
+        "name": "Sarah Lee",
+        "feedback": "Emily is an amazing trainer! The energy was fantastic.",
+        "rating": 4.8
+      }
+    ],
+    "servicesProvided": [
+      "Personalized workout adjustments",
+      "Live calorie tracking",
+      "Hydration station",
+      "Post-workout recovery tips"
+    ],
+    "schedule": {
+      "Monday": "7:00 AM - 8:00 AM",
+      "Wednesday": "6:00 PM - 7:00 PM",
+      "Saturday": "9:00 AM - 10:00 AM"
+    },
+    "quote": "Push yourself because no one else is going to do it for you.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Strength Builder",
+    "description": "Full-body strength training focusing on muscle endurance and power.",
+    "totalBookings": 134,
+    "category": "Strength",
+    "trainer": {
+      "name": "Michael Reed",
+      "experience": "7 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "60 min",
+    "roomSummary": "Equipped with free weights, machines, and resistance bands.",
+    "bulletPoints": [
+      "Improves overall strength and stamina.",
+      "Targets major muscle groups.",
+      "Customizable for all fitness levels.",
+      "Boosts metabolism and posture."
+    ],
+    "clients": [
+      {
+        "name": "David Kim",
+        "feedback": "Challenging but rewarding session!",
+        "rating": 4.7
+      },
+      {
+        "name": "Anna White",
+        "feedback": "Michael’s guidance is top-notch.",
+        "rating": 5
+      }
+    ],
+    "servicesProvided": [
+      "Personalized training plan",
+      "Nutritional guidance",
+      "Performance tracking",
+      "Post-workout recovery advice"
+    ],
+    "schedule": {
+      "Tuesday": "5:30 PM - 6:30 PM",
+      "Thursday": "7:00 AM - 8:00 AM",
+      "Saturday": "10:00 AM - 11:00 AM"
+    },
+    "quote": "Strength does not come from physical capacity. It comes from an indomitable will.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Yoga Serenity",
+    "description": "A blend of traditional yoga and mindfulness to enhance flexibility and peace.",
+    "totalBookings": 98,
+    "category": "Yoga",
+    "trainer": {
+      "name": "Sophia Miller",
+      "experience": "6 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "50 min",
+    "roomSummary": "Calm, serene atmosphere with yoga mats, blocks, and ambient music.",
+    "bulletPoints": [
+      "Enhances flexibility and mobility.",
+      "Promotes mental relaxation and stress relief.",
+      "Great for beginners and advanced yogis.",
+      "Improves posture and breathing techniques."
+    ],
+    "clients": [
+      {
+        "name": "Emma Brown",
+        "feedback": "Perfect way to relax and stretch after a long day.",
+        "rating": 4.9
+      },
+      {
+        "name": "James Smith",
+        "feedback": "Loved the guided meditation at the end.",
+        "rating": 4.8
+      }
+    ],
+    "servicesProvided": [
+      "Guided meditation",
+      "Breathing techniques",
+      "Posture correction",
+      "Aromatherapy support"
+    ],
+    "schedule": {
+      "Monday": "8:00 AM - 9:00 AM",
+      "Wednesday": "6:00 PM - 7:00 PM",
+      "Friday": "5:00 PM - 6:00 PM"
+    },
+    "quote": "Yoga is the journey of the self, through the self, to the self.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Zumba Dance Party",
+    "description": "A high-energy dance workout combining Latin and international music.",
+    "totalBookings": 185,
+    "category": "Dance",
+    "trainer": {
+      "name": "Carlos Fernandez",
+      "experience": "8 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "50 min",
+    "roomSummary": "Large dance studio with mirrors and vibrant lighting.",
+    "bulletPoints": [
+      "Fun and effective cardio workout.",
+      "Improves coordination and agility.",
+      "No dance experience needed.",
+      "Burns calories while having fun."
+    ],
+    "clients": [
+      {
+        "name": "Lily Parker",
+        "feedback": "So much fun! Didn’t feel like a workout at all.",
+        "rating": 5
+      },
+      {
+        "name": "Jake Wilson",
+        "feedback": "Carlos makes every session exciting!",
+        "rating": 4.7
+      }
+    ],
+    "servicesProvided": [
+      "Live DJ music",
+      "Hydration breaks",
+      "Basic dance tutorials",
+      "Post-session cooldown"
+    ],
+    "schedule": {
+      "Tuesday": "6:30 PM - 7:30 PM",
+      "Thursday": "6:00 PM - 7:00 PM",
+      "Sunday": "10:30 AM - 11:30 AM"
+    },
+    "quote": "Dancing is like dreaming with your feet.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Cycling Blast",
+    "description": "An intense indoor cycling session to boost cardiovascular endurance.",
+    "totalBookings": 120,
+    "category": "Cycling",
+    "trainer": {
+      "name": "Jessica Moore",
+      "experience": "4 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "45 min",
+    "roomSummary": "State-of-the-art spin bikes with digital tracking.",
+    "bulletPoints": [
+      "Enhances heart health and stamina.",
+      "Low-impact but high-intensity workout.",
+      "Energetic music and group motivation.",
+      "Adjustable resistance for all levels."
+    ],
+    "clients": [
+      {
+        "name": "Mark Johnson",
+        "feedback": "Best cycling class I’ve attended!",
+        "rating": 4.9
+      },
+      {
+        "name": "Olivia Green",
+        "feedback": "Jessica’s energy keeps everyone going.",
+        "rating": 5
+      }
+    ],
+    "servicesProvided": [
+      "Heart rate monitoring",
+      "Endurance tracking",
+      "Group challenges",
+      "Cooldown stretching"
+    ],
+    "schedule": {
+      "Monday": "6:00 AM - 6:45 AM",
+      "Wednesday": "7:00 PM - 7:45 PM",
+      "Saturday": "9:30 AM - 10:15 AM"
+    },
+    "quote": "Ride as much or as little, as long or as short as you feel. But ride.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Pilates Core Focus",
+    "description": "A low-impact workout designed to strengthen core muscles and improve flexibility.",
+    "totalBookings": 110,
+    "category": "Pilates",
+    "trainer": {
+      "name": "Laura Benson",
+      "experience": "6 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "50 min",
+    "roomSummary": "Equipped with Pilates mats, resistance bands, and stability balls.",
+    "bulletPoints": [
+      "Targets core strength and stability.",
+      "Improves posture and flexibility.",
+      "Low-impact but highly effective.",
+      "Great for injury prevention."
+    ],
+    "clients": [
+      {
+        "name": "Sophia Carter",
+        "feedback": "Laura is amazing! My core feels so much stronger.",
+        "rating": 5
+      },
+      {
+        "name": "Liam Scott",
+        "feedback": "A perfect class for core engagement.",
+        "rating": 4.8
+      }
+    ],
+    "servicesProvided": [
+      "Posture correction",
+      "Personalized modifications",
+      "Breathing exercises",
+      "Guided stretching"
+    ],
+    "schedule": {
+      "Tuesday": "6:30 AM - 7:20 AM",
+      "Thursday": "5:00 PM - 5:50 PM",
+      "Sunday": "9:00 AM - 9:50 AM"
+    },
+    "quote": "A strong core is the foundation for a strong body.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Bootcamp Extreme",
+    "description": "A high-intensity military-style bootcamp to push your limits.",
+    "totalBookings": 200,
+    "category": "Strength & Conditioning",
+    "trainer": {
+      "name": "Robert Daniels",
+      "experience": "9 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "60 min",
+    "roomSummary": "Outdoor training ground with obstacle courses and open space.",
+    "bulletPoints": [
+      "Intense full-body conditioning.",
+      "Combines cardio, strength, and endurance.",
+      "Great for athletic performance.",
+      "Pushes mental and physical limits."
+    ],
+    "clients": [
+      {
+        "name": "Ethan Blake",
+        "feedback": "This class will test your strength like never before!",
+        "rating": 5
+      },
+      {
+        "name": "Natalie Rogers",
+        "feedback": "Tough but worth it!",
+        "rating": 4.9
+      }
+    ],
+    "servicesProvided": [
+      "Obstacle training",
+      "Team-based workouts",
+      "Nutrition advice",
+      "Cooldown recovery techniques"
+    ],
+    "schedule": {
+      "Monday": "5:30 AM - 6:30 AM",
+      "Wednesday": "6:00 PM - 7:00 PM",
+      "Saturday": "8:00 AM - 9:00 AM"
+    },
+    "quote": "Train insane or remain the same.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Aqua Fitness",
+    "description": "A refreshing water-based workout to improve strength and mobility.",
+    "totalBookings": 87,
+    "category": "Water Exercise",
+    "trainer": {
+      "name": "Rachel Adams",
+      "experience": "5 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "45 min",
+    "roomSummary": "Indoor heated pool with resistance training equipment.",
+    "bulletPoints": [
+      "Low-impact but highly effective.",
+      "Great for joint health and recovery.",
+      "Improves balance and coordination.",
+      "Burns calories with minimal stress on joints."
+    ],
+    "clients": [
+      {
+        "name": "Mark Stevens",
+        "feedback": "Perfect for anyone looking for a gentle but effective workout.",
+        "rating": 4.8
+      },
+      {
+        "name": "Olivia Harris",
+        "feedback": "Love the resistance training in the water!",
+        "rating": 5
+      }
+    ],
+    "servicesProvided": [
+      "Water resistance training",
+      "Balance and flexibility exercises",
+      "Hydration support",
+      "Post-workout relaxation session"
+    ],
+    "schedule": {
+      "Tuesday": "10:00 AM - 10:45 AM",
+      "Thursday": "5:30 PM - 6:15 PM",
+      "Saturday": "8:00 AM - 8:45 AM"
+    },
+    "quote": "Water is the best resistance—it strengthens while protecting your joints.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Martial Arts Fundamentals",
+    "description": "A self-defense and fitness class combining martial arts techniques.",
+    "totalBookings": 112,
+    "category": "Martial Arts",
+    "trainer": {
+      "name": "Daniel Kim",
+      "experience": "10 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "60 min",
+    "roomSummary": "Martial arts dojo with padded flooring and striking pads.",
+    "bulletPoints": [
+      "Teaches self-defense and discipline.",
+      "Enhances agility and coordination.",
+      "Builds confidence and strength.",
+      "Great for all experience levels."
+    ],
+    "clients": [
+      {
+        "name": "James Wilson",
+        "feedback": "Amazing class for learning self-defense!",
+        "rating": 5
+      },
+      {
+        "name": "Sophia Lopez",
+        "feedback": "Daniel is a fantastic instructor!",
+        "rating": 4.9
+      }
+    ],
+    "servicesProvided": [
+      "Self-defense training",
+      "Strength and agility drills",
+      "Mental focus exercises",
+      "Breathing and meditation techniques"
+    ],
+    "schedule": {
+      "Monday": "7:00 PM - 8:00 PM",
+      "Wednesday": "6:30 PM - 7:30 PM",
+      "Friday": "5:00 PM - 6:00 PM"
+    },
+    "quote": "The more you sweat in training, the less you bleed in battle.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  },
+  {
+    "title": "Mindful Meditation",
+    "description": "A guided meditation class focused on relaxation and mindfulness.",
+    "totalBookings": 75,
+    "category": "Wellness",
+    "trainer": {
+      "name": "Emma Lewis",
+      "experience": "8 years",
+      "profileImage": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    },
+    "duration": "40 min",
+    "roomSummary": "Quiet, dimly lit room with cushions and soft background music.",
+    "bulletPoints": [
+      "Reduces stress and anxiety.",
+      "Improves focus and mental clarity.",
+      "Promotes deep relaxation.",
+      "Accessible for all experience levels."
+    ],
+    "clients": [
+      {
+        "name": "Oliver Jones",
+        "feedback": "A truly calming experience.",
+        "rating": 4.9
+      },
+      {
+        "name": "Lily Thompson",
+        "feedback": "Best way to end a stressful day.",
+        "rating": 5
+      }
+    ],
+    "servicesProvided": [
+      "Guided visualization",
+      "Breathing exercises",
+      "Gentle stretching",
+      "Aromatherapy options"
+    ],
+    "schedule": {
+      "Tuesday": "8:00 PM - 8:40 PM",
+      "Thursday": "7:30 AM - 8:10 AM",
+      "Sunday": "6:00 PM - 6:40 PM"
+    },
+    "quote": "The mind is everything. What you think, you become.",
+    "sliderImages": [
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg",
+      "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+    ],
+
+    "image": "https://i.ibb.co.com/bLPBPqv/class-model.jpg"
+  }
+]
