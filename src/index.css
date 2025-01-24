@@ -8,3 +8,23 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.slick-prev,
+.slick-next {
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: white !important;
+  border-radius: 50%;
+  padding: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 10 !important;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #f98080 !important;
+  /* background: rgba(255, 87, 51, 0.8) !important; */
+}

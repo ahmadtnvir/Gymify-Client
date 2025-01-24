@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Faisal Karim",
+    "location": "Nasirabad, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 4.9,
+    "review": "This gym changed my life! The personal trainers are very knowledgeable, and the equipment is top-notch. Highly recommended!"
+  },
+  {
+    "name": "Samira Alam",
+    "location": "Panchlaish, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 4.7,
+    "review": "Great atmosphere and a friendly community. The yoga and strength training sessions helped me get back in shape!"
+  },
+  {
+    "name": "Asif Chowdhury",
+    "location": "Bayezid, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 5.0,
+    "review": "Best fitness center in town! The trainers are super professional, and I love the customized diet plans they provide."
+  },
+  {
+    "name": "Tasnia Rahman",
+    "location": "Oxygen, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 4.8,
+    "review": "I joined for weight loss and achieved amazing results! The cardio and HIIT programs really helped me tone my body."
+  },
+  {
+    "name": "Zubair Ahmed",
+    "location": "Patenga, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 4.6,
+    "review": "A great place to work out! I love the gym's environment and the well-maintained equipment. Highly recommended for fitness lovers."
+  },
+  {
+    "name": "Nadia Islam",
+    "location": "Agrabad, Chittagong",
+    "image": "https://i.ibb.co.com/xLqDHCR/profile1.jpg",
+    "rating": 4.9,
+    "review": "Absolutely love this fitness club! The aerobics and strength training classes helped me stay active and healthy."
+  }
+]
