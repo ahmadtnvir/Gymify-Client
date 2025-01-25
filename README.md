@@ -102,11 +102,12 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     ✅Inside the banner will be a Heading Title, a Short Description, and
     ✅a button that will redirect the user to the classes page.
 -->
-<!-- 👉 
+<!-- 👉
     ✅Featured section / Our Services: Create a featured section highlighting key website features through a series of cards.
     ✅Each card should include a concise title, an engaging description, and an icon or image visually representing the feature.
     💡For ideas search google.
     <!-- TODO --> Here I implement a button when all route will be created it will redirect user to this specific route. -->
+
 -->
 
 <!-- 👉
@@ -117,22 +118,22 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
 <!-- 👉
     ✅Featured classes: Create a "Featured Classes" section showcasing the top six most booked classes, based on their total booking counts.
     ✅Each class should be displayed with a title, a brief description, and the total number of bookings to highlight its popularity. ✅All data will be from the database.
-    ✅📝 Use the backend and MongoDB $sort method to filter data based on the total booking number. 
+    ✅📝 Use the backend and MongoDB $sort method to filter data based on the total booking number.
     ? For that, you must count the total booked each time a user booked a class.
 -->
 
 <!-- 👉
-    ✅Testimonials or Reviews: Implement a carousel slider that displays three review cards simultaneously. 
-    ✅This slider should be capable of cycling through all the reviews submitted by a member. 
-    ✅The slider will include functionality to navigate(next, prev) through the reviews smoothly, allowing users to view each one in succession. 
-    
+    ✅Testimonials or Reviews: Implement a carousel slider that displays three review cards simultaneously.
+    ✅This slider should be capable of cycling through all the reviews submitted by a member.
+    ✅The slider will include functionality to navigate(next, prev) through the reviews smoothly, allowing users to view each one in succession.
+
     ❌This will be a dynamic section and the user can add reviews from his dashboard.   See this Design demo
     🚩See the Dashboard member part for more info. 👇
 -->
 
 <!-- 👉
-    ✅Latest Community/Forum posts: show recent six(6) community forum posts or articles. 
-    ✅Ensure to include direct links for further reading or exploring the blog section. 
+    ✅Latest Community/Forum posts: show recent six(6) community forum posts or articles.
+    ✅Ensure to include direct links for further reading or exploring the blog section.
     ✅Aim to feature 4-6 posts in total.
 -->
 
@@ -140,21 +141,24 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     Newsletter section: Design a subscription section that includes fields for the user's name and email address, along with a "Subscribe Now" button. When the "Subscribe Now" button is clicked, the user's information should be saved to the database. Ensure that this process does not require users to log in to subscribe to the newsletter.
 -->
 
-<!-- 👉👉👉
-    Team section: Display at least three trainer profiles, each accompanied by key information. 
-    Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo.
+<!-- 👉
+    ✅Team section: Display at least three trainer profiles, each accompanied by key information.
+    ✅Each profile should include the trainer's name, a brief biography, areas of expertise, and a professional photo.
 -->
 
-All Trainers Page👯(Public)
-👉 Trainer Section: Show all the Trainer profiles. Each Card contains the following info.
-Trainer name
-Profile Image
-Years of Experience
-Social icons
-Available slots.
-Other info if needed.
-Know more
-📝By clicking the Know More button should redirect to the Trainer details page,
+<!-- TODO: 
+<!-- ! All Trainers Page👯(Public) -->
+<!-- 👉 
+    Trainer Section: Show all the Trainer profiles. Each Card contains the following info.
+    Trainer name
+    Profile Image
+    Years of Experience
+    Social icons
+    Available slots.
+    Other info if needed.
+    Know more
+    📝By clicking the Know More button should redirect to the Trainer details page, 
+-->
 
 Trainer Details Page🤵(Public)
 
