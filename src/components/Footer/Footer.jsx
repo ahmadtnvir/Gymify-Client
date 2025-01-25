@@ -135,19 +135,19 @@ const Footer = () => {
               </div>
               <div className="flex space-x-3 mt-3">
                 <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
-                  <FaFacebook className="text-[#ac1929] hover:text-white" />
+                  <FaFacebook className="text-white" />
                 </button>
                 <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
-                  <FaXTwitter className="text-[#ac1929] hover:text-white" />
+                  <FaXTwitter className=" text-white" />
                 </button>
                 <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
-                  <FaYoutube className="text-[#ac1929] hover:text-white" />
+                  <FaYoutube className="text-white" />
                 </button>
                 <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
-                  <FaInstagram className="text-[#ac1929] hover:text-white" />
+                  <FaInstagram className="text-white" />
                 </button>
                 <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
-                  <FaWhatsapp className="text-[#ac1929] hover:text-white" />
+                  <FaWhatsapp className="text-white" />
                 </button>
               </div>
             </div>

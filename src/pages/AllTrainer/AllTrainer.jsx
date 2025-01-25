@@ -4,6 +4,8 @@ import PageHeading from "../../components/PageHeading/PageHeading";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import TrainerCard from "../../components/Shared/TrainerCard/TrainerCard";
+import Container from "../../utils/Container/Container";
+import SectionContainer from "../../utils/SectionContainer/SectionContainer";
 
 const AllTrainer = () => {
   const axiosPublic = useAxiosPublic();
@@ -37,17 +39,18 @@ const AllTrainer = () => {
       </div>
     );
   return (
-    <div className="w-full min-h-screen bg-[#ffeff3]">
+    <Container classes={"bg-[#ffeff3]"}>
       <RouteNaming name={"Trainers"}></RouteNaming>
       <PageHeading title={"Team Staff"}></PageHeading>
-      <div className="min-h-screen max-w-7xl mx-auto px-4 py-10">
+      <SectionContainer>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {trainers.map((trainer) => (
+            // TODO: Need to change this card layout.
             <TrainerCard key={trainer._id} trainer={trainer}></TrainerCard>
           ))}
         </div>
-      </div>
-    </div>
+      </SectionContainer>
+    </Container>
   );
 };
 

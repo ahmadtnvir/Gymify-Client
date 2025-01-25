@@ -149,33 +149,39 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
 <!-- TODO: 
 <!-- ! All Trainers Page👯(Public) -->
 <!-- 👉 
-    Trainer Section: Show all the Trainer profiles. Each Card contains the following info.
-    Trainer name
-    Profile Image
-    Years of Experience
-    Social icons
-    Available slots.
-    Other info if needed.
-    Know more
+    ✅Trainer Section: Show all the Trainer profiles. Each Card contains the following info.
+    ✅Trainer name
+    ✅Profile Image
+    ❌Years of Experience
+    ❌Social icons
+    ❌Available slots.
+    ❌Other info if needed.
+    ✅Know more
     📝By clicking the Know More button should redirect to the Trainer details page, 
 -->
 
-Trainer Details Page🤵(Public)
+<!-- TODO: -->
+<!--! Trainer Details Page🤵(Public)
 
-Design a Trainer details page with a layout consisting of two sections. 👇
+    Design a Trainer details page with a layout consisting of two sections. 👇
 
-Trainer info
-Available slots
+    Trainer info
+    Available slots
+    
+    👉
+    ✅Trainer Information Section: Include the trainer's name, photo, details, expertise, and other info. This section should provide ✅comprehensive information about the trainer's background and qualifications.
+    
+    ❌Available Slots: Display a schedule of the trainer's available time slots for booking sessions. Each slot will be represented as a button/link.
 
-Trainer Information Section: Include the trainer's name, photo, details, expertise, and other info. This section should provide comprehensive information about the trainer's background and qualifications.
-Available Slots: Display a schedule of the trainer's available time slots for booking sessions. Each slot will be represented as a button/link.
+    🚀clicking any available slot will redirect the user to the trainer booking page. 
+    
+    👉
+    Be A Trainer Section: Below/above the Trainer details and Available Slots sections, there will be a"Be A Trainer" section. This section should feature a prominent Call to Action (CTA) button labeled "Become a Trainer." Upon clicking this button, users will be redirected to the "Become a Trainer" page.
+    (search this keyword on Google for better understanding: keyword) 
+-->
 
-🚀clicking any available slot will redirect the user to the trainer booking page.
-
-👉Be A Trainer Section: Below/above the Trainer details and Available Slots sections, there will be a"Be A Trainer" section. This section should feature a prominent Call to Action (CTA) button labeled "Become a Trainer." Upon clicking this button, users will be redirected to the "Become a Trainer" page.
-(search this keyword on Google for better understanding: keyword)
-
-Trainer Booked Page👨‍💻(Private)
+<!-- TODO -->
+<!--! Trainer Booked Page👨‍💻(Private)
 👉 From the Trainer Details Page Available Slots when a user clicks on any available slot, they will be redirected to the Trainer Booked Page.
 
 This page will show the following info:
@@ -206,9 +212,9 @@ Price: $100
 
 Users are required to choose one membership plan from the options provided. The table design and content are subject to customization per the assignment requirements.
 
-👉 Click the Join Now button to redirect the user to the payment page👇
+👉 Click the Join Now button to redirect the user to the payment page👇 -->
 
-Payment Page💸(Private)
+<!-- Payment Page💸(Private)
 👉 On this page, you have to implement a stripe based payment system . show below data.  
 Trainer name
 Slot name
@@ -223,7 +229,7 @@ Integrate Stripe Payment Gateway
 save payment information in the database after a successful transaction.
 Save required information in the database
 Increase Booking count of class
-⏰ here you can use a form or card. If you add a form don’t let the user modify any of the above info.
+⏰ here you can use a form or card. If you add a form don’t let the user modify any of the above info. -->
 
 Be a Trainer Page (Private)
 👉 This page will have a form where the user can submit the following info:

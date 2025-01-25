@@ -5,6 +5,7 @@ import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home/Home";
 import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
+import TrainerDetails from "../pages/TrainerDetails/TrainerDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "allTrainer",
         element: <AllTrainer></AllTrainer>,
+      },
+      {
+        path: "trainer/:id",
+        element: <TrainerDetails></TrainerDetails>,
       },
     ],
   },
