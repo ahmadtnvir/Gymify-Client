@@ -1,10 +1,9 @@
-import { LazyLoadImage } from "zenui-image-react";
-import model from "../../../assets/Images/banner_model.png";
 import { Link } from "react-router-dom";
+import model from "../../../assets/Images/banner_model.png";
 
 const Banner = () => {
   return (
-    <div className="min-h-fit max-w-7xl mx-auto px-4 pt-10">
+    <div className="h-[1060px] min-h-fit max-w-7xl mx-auto px-4 pt-10">
       {/* Header Section */}
       <div className="text-white text-start">
         <h2 className="font-bold text-2xl uppercase tracking-wide sm:text-3xl lg:text-4xl">
@@ -17,17 +16,11 @@ const Banner = () => {
 
       {/* Image and Content */}
       <div className="relative text-white mt-8">
-        {/* <img
+        <img
           className="w-full h-auto object-cover rounded-lg"
+          loading="lazy"
           src={model}
           alt="Fitness Model"
-        /> */}
-        <LazyLoadImage
-          className="w-full h-auto object-cover rounded-lg"
-          src={model}
-          alt="Fitness Model"
-          placeholderType="effect"
-          effectType="blur"
         />
 
         {/* Top Right Content */}

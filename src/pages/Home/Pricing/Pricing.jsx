@@ -23,7 +23,7 @@ const Pricing = () => {
             <div>
               <h3 className="text-3xl text-white font-bold">Basic Plan</h3>
               <h2 className="text-[60px] text-[#ac1929] font-bold">
-                $150 <span className="text-[14px] text-white">/ Month</span>
+                $10 <span className="text-[14px] text-white">/ Month</span>
               </h2>
             </div>
             <div className="bg-gray-950 p-5 rounded-2xl">
@@ -74,7 +74,7 @@ const Pricing = () => {
             <div>
               <h3 className="text-3xl text-white font-bold">Premium Plan</h3>
               <h2 className="text-[60px] text-white font-bold">
-                $250 <span className="text-[14px] text-white">/ Month</span>
+                $100 <span className="text-[14px] text-white">/ Month</span>
               </h2>
             </div>
             <div className="bg-gray-950 p-5 rounded-2xl">
@@ -125,7 +125,7 @@ const Pricing = () => {
             <div>
               <h3 className="text-3xl text-white font-bold">Standard Plan</h3>
               <h2 className="text-[60px] text-[#ac1929] font-bold">
-                $200 <span className="text-[14px] text-white">/ Month</span>
+                $50 <span className="text-[14px] text-white">/ Month</span>
               </h2>
             </div>
             <div className="bg-gray-950 p-5 rounded-2xl">
@@ -168,7 +168,7 @@ const Pricing = () => {
             </div>
             <div>
               <button className="mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">
-                SIGN UP
+                JOIN NOW
               </button>
             </div>
           </div>

@@ -13,6 +13,8 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import Lottie from "lottie-react";
+import beATrainer from "../../assets/lottie/be_trainer.json";
 
 const TrainerDetails = () => {
   const trainerId = useParams();
@@ -53,12 +55,12 @@ const TrainerDetails = () => {
       <RouteNaming name={"Trainer Details"}></RouteNaming>
       <PageHeading title={"Trainer Details"}></PageHeading>
       <SectionContainer>
-        <div className="grid grid-cols-1 lg:grid-cols-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div
             style={{
               textShadow: "0.5px 0.5px 0.5px #000000",
             }}
-            className="col-span-8 text-start space-y-4 text-gray-600"
+            className="col-span-8 text-start space-y-4 text-gray-600 h-full flex flex-col justify-between"
           >
             <h1 className="text-3xl font-bold text-black">{trainer.name}</h1>
             <h3 className="text-xl font-bold text-[#ac1929]">
@@ -82,16 +84,19 @@ const TrainerDetails = () => {
               </ul>
             </div>
             <div className="divider"></div>
-            <div className="bg-[#ac1929] rounded-xl flex justify-center items-center py-5 text-lg underline text-white text-center">
+            <div className="bg-[#ac1929] rounded-xl flex justify-center items-center py-5 text-lg text-white text-center">
               <ul>
                 {trainer.achievementsTestimonials.map((achievement, i) => (
-                  <li key={i} className="mb-3 hover:font-semibold">
+                  <li
+                    key={i}
+                    className="mb-3 hover:font-semibold transition-all duration-300"
+                  >
                     {achievement}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex justify-center items-center space-x-3 mt-3">
+            <div className="flex justify-center items-center space-x-3 mt-auto">
               <button className="btn btn-circle btn-sm border-[#ac1929] bg-transparent hover:bg-[#ac1929]">
                 <FaLinkedin />
               </button>
@@ -112,7 +117,50 @@ const TrainerDetails = () => {
               </button>
             </div>
           </div>
-          <div className="col-span-4 border border-black"></div>
+          <div className="col-span-4 grid grid-cols-1 grid-rows-2 gap-5">
+            {/* // TODO: Implement Available Slots functionality. */}
+            <div className=" flex justify-center items-center">
+              <h1>Available Slots Section</h1>
+            </div>
+            <div className=" bg-[#ac1929] rounded-xl text-white p-6">
+              <div>
+                <h2 className="text-2xl font-bold">Become a Trainer</h2>
+                <p className="mt-2">
+                  Turn your passion into a career! Join us and train the next
+                  generation of fitness enthusiasts.
+                </p>
+                <div className=" w-full p-5 flex justify-center">
+                  <Link to={`/`}>
+                    <button className="btn relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-[#ac1929] rounded-full shadow-md group">
+                      <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#ac1929] group-hover:translate-x-0 ease">
+                        <svg
+                          className="w-6 h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span className="absolute flex items-center justify-center w-full h-full text-[#ac1929] bg-[#ffeff3] transition-all duration-300 transform group-hover:translate-x-full ease">
+                        Apply Now
+                      </span>
+                      <span className="relative invisible">Apply Now</span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="animate-pulse">
+                <Lottie animationData={beATrainer} loop={true} />
+              </div>
+            </div>
+          </div>
         </div>
       </SectionContainer>
     </Container>

@@ -176,92 +176,99 @@ Make sure to keep the navbar and footer on all the pages except on the 404 page.
     🚀clicking any available slot will redirect the user to the trainer booking page. 
     
     👉
-    Be A Trainer Section: Below/above the Trainer details and Available Slots sections, there will be a"Be A Trainer" section. This section should feature a prominent Call to Action (CTA) button labeled "Become a Trainer." Upon clicking this button, users will be redirected to the "Become a Trainer" page.
+    ✅Be A Trainer Section: Below/above the Trainer details and Available Slots sections, there will be a"Be A Trainer" section. This ✅section should feature a prominent Call to Action (CTA) button labeled "Become a Trainer." Upon clicking this button, users will ✅be redirected to the "Become a Trainer" page.
     (search this keyword on Google for better understanding: keyword) 
 -->
 
 <!-- TODO -->
 <!--! Trainer Booked Page👨‍💻(Private)
-👉 From the Trainer Details Page Available Slots when a user clicks on any available slot, they will be redirected to the Trainer Booked Page.
+    ❌👉 From the Trainer Details Page Available Slots when a user clicks on any available slot, they will be redirected to the Trainer Booked Page.
 
-This page will show the following info:
-Trainer name
-Selected slot
-Classes
-packages: (ex: Basic, Standard, Premium)
-Join now button
+    This page will show the following info:
+    ❌Trainer name
+    ❌Selected slot
+    ❌Classes
+    ✅packages: (ex: Basic, Standard, Premium)
+    ✅Join now button
 
-As for packages will include some extra benefits for example:
+    ✅As for packages will include some extra benefits for example:
 
-Basic Membership
-Standard Membership
-Premium Membership
-Access to gym facilities during regular operating hours.
-All benefits of the basic membership.
-All benefits of the standard membership.
-Use of cardio and strength training equipment.
-Access to group fitness classes such as yoga, spinning, and Zumba.
-Access to personal training sessions with certified trainers.
+    ✅Basic Membership
+    ✅Standard Membership
+    ✅Premium Membership
+    ✅Access to gym facilities during regular operating hours.
+    ✅All benefits of the basic membership.
+    ✅All benefits of the standard membership.
+    ✅Use of cardio and strength training equipment.
+    ✅Access to group fitness classes such as yoga, spinning, and Zumba.
+    ✅Access to personal training sessions with certified trainers.
+    ✅Access to locker rooms and showers.
+    ✅Use of additional amenities like a sauna or steam room.
+    ✅Discounts on additional services such as massage therapy or nutrition counseling.
+    ✅Price: $10
+    ✅Price: $50
+    ✅Price: $100
 
-Access to locker rooms and showers.
-Use of additional amenities like a sauna or steam room.
-Discounts on additional services such as massage therapy or nutrition counseling.
-Price: $10
-Price: $50
-Price: $100
+    ✅Users are required to choose one membership plan from the options provided. The table design and content are subject to customization per the assignment requirements.
 
-Users are required to choose one membership plan from the options provided. The table design and content are subject to customization per the assignment requirements.
+    ✅👉 Click the Join Now button to redirect the user to the payment page👇 
+-->
+<!-- TODO ***-->
+<!--! Payment Page💸(Private)
+    👉 On this page, you have to implement a stripe based payment system . show below data.  
+    Trainer name
+    Slot name
+    Package name
+    Price
+    Your name, email & other info
+    Other info if needed
 
-👉 Click the Join Now button to redirect the user to the payment page👇 -->
+    Integrate Stripe Payment Gateway
 
-<!-- Payment Page💸(Private)
-👉 On this page, you have to implement a stripe based payment system . show below data.  
-Trainer name
-Slot name
-Package name
-Price
-Your name, email & other info
-Other info if needed
+    📝 Clicking on the pay button will
+    save payment information in the database after a successful transaction.
+    Save required information in the database
+    Increase Booking count of class
+    ⏰ here you can use a form or card. If you add a form don’t let the user modify any of the above info. 
+-->
 
-Integrate Stripe Payment Gateway
+<!-- TODO ***-->
+<!--! Be a Trainer Page (Private)
+    👉 This page will have a form where the user can submit the following info:
+    Full Name
+    Email (read-only)
+    Age
+    Profile Image
+    Skills (use checkbox for selecting multiple skills)
+    Available days a week. (Ex: Sun, Mon, Tues, Thu) see below for more info👇
+    Available time in a day
+    Other info depending on your project.
+    Applied Button.
+    
+    📝 Also, the status will be pending by default. All the info will be stored in the database by clicking the apply button.
+    
+    💡For Available days in a week you have to use this npm package: React Select. Also, the user can’t insert any value. There will be only 7 days' name on the select option.
+    
+    🛑 Users don’t have the option to add his/her input for a week. user only can select the item (7 days' name) from the select bo
+-->
 
-📝 Clicking on the pay button will
-save payment information in the database after a successful transaction.
-Save required information in the database
-Increase Booking count of class
-⏰ here you can use a form or card. If you add a form don’t let the user modify any of the above info. -->
+<!-- TODO -->
+<!--! Classes Page(Public)
+    👉 All Classes Section: Create an All Classes section where users can access a comprehensive list of all available classes.
+    📝 Each class will display all necessary information, including class description and any additional details. 
+    Additionally, there will be a list of trainers who specialize in teaching that specific class, a maximum of five(5) trainers.
 
-Be a Trainer Page (Private)
-👉 This page will have a form where the user can submit the following info:
-Full Name
-Email (read-only)
-Age
-Profile Image
-Skills (use checkbox for selecting multiple skills)
-Available days a week. (Ex: Sun, Mon, Tues, Thu) see below for more info👇
-Available time in a day
-Other info depending on your project.
-Applied Button.
+    For example, if the class is "Yoga," there will be a list of trainers who conduct Yoga sessions.
+    👉 Pagination: Implement pagination for the "All Classes" section, displaying six classes per page by default. Users can navigate through the list of classes by changing the page number, allowing them to view the remaining classes.
 
-📝 Also, the status will be pending by default. All the info will be stored in the database by clicking the apply button.
+    💡From the list of trainers associated with a specific class, if a user clicks on any of the trainer's images, will redirected to that particular Trainer details page. 
+-->
 
-💡For Available days in a week you have to use this npm package: React Select. Also, the user can’t insert any value. There will be only 7 days' name on the select option.
-
-🛑 Users don’t have the option to add his/her input for a week. user only can select the item (7 days' name) from the select box.
-
-Classes Page(Public)
-👉 All Classes Section: Create an All Classes section where users can access a comprehensive list of all available classes.
-📝 Each class will display all necessary information, including class description and any additional details. Additionally, there will be a list of trainers who specialize in teaching that specific class, a maximum of five(5) trainers.
-
-For example, if the class is "Yoga," there will be a list of trainers who conduct Yoga sessions.
-👉 Pagination: Implement pagination for the "All Classes" section, displaying six classes per page by default. Users can navigate through the list of classes by changing the page number, allowing them to view the remaining classes.
-
-💡From the list of trainers associated with a specific class, if a user clicks on any of the trainer's images, will redirected to that particular Trainer details page.
-
-Forum Page🅱️(Public)
-📖Post section: Display 6 posts per page on the forum page, implementing pagination using backend functionality.
-
-👉 Voting System: Implement an up-vote and down-vote system similar to Quora's. Users need to log in to vote for forum posts,
+<!-- TODO -->
+<!--! Forum Page🅱️(Public)
+    📖Post section: Display 6 posts per page on the forum page, implementing pagination using backend functionality.
+    👉 Voting System: Implement an up-vote and down-vote system similar to Quora's. Users need to log in to vote for forum posts, 
+-->
 
 Dashboard 🪪(Private)
 👉 In the dashboard, the visibility and access to pages will be conditional based on the user's role. Each page within the dashboard will be private and restricted based on the user's role. For instance, an admin won't be able to see the "Manage Slots" page, while a trainer won't have access to the "All Trainers" page. Similarly, members won't be able to view either of these pages. Also, the primary Navbar and Footer won’t be shown in the dashboard.

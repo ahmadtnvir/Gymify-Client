@@ -16,6 +16,7 @@ const SignIn = () => {
   console.log(showPassword);
   const navigate = useNavigate();
   const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -31,7 +32,8 @@ const SignIn = () => {
         setUser(currentUser);
         setLoading(false);
         reset();
-        location?.state ? navigate(location.state) : navigate("/");
+        // location?.state ? navigate(location.state) : navigate("/");
+        navigate(from, { replace: true });
         toast.success("Sign in successfully!");
       })
       .catch((err) => {
@@ -48,7 +50,8 @@ const SignIn = () => {
         ).then(() => {
           setUser(currentUserGoogle);
           setLoading(false);
-          location?.state ? navigate(location.state) : navigate("/");
+          // location?.state ? navigate(location.state) : navigate("/");
+          navigate(from, { replace: true });
           toast.success("Sign in successfully!");
         });
       })

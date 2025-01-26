@@ -16,6 +16,7 @@ const SignUp = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -32,7 +33,8 @@ const SignUp = () => {
           setUser(currentUser);
           setLoading(false);
           reset();
-          location?.state ? navigate(location.state) : navigate("/");
+          // location?.state ? navigate(location.state) : navigate("/");
+          navigate(from, { replace: true });
           toast.success("Sign up successfully!");
         });
       })
@@ -50,7 +52,8 @@ const SignUp = () => {
         ).then(() => {
           setUser(currentUserGoogle);
           setLoading(false);
-          location?.state ? navigate(location.state) : navigate("/");
+          // location?.state ? navigate(location.state) : navigate("/");
+          navigate(from, { replace: true });
           toast.success("Sign up successfully!");
         });
       })
