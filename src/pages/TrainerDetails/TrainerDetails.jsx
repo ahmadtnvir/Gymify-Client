@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa6";
 import Lottie from "lottie-react";
 import beATrainer from "../../assets/lottie/be_trainer.json";
+import Btn from "../../components/Btn";
 
 const TrainerDetails = () => {
   const trainerId = useParams();
@@ -121,6 +122,9 @@ const TrainerDetails = () => {
             {/* // TODO: Implement Available Slots functionality. */}
             <div className=" flex justify-center items-center">
               <h1>Available Slots Section</h1>
+              <Link to={"/trainerBooking"}>
+                <Btn content={"Available Slot"}></Btn>
+              </Link>
             </div>
             <div className=" bg-[#ac1929] rounded-xl text-white p-6">
               <div>
