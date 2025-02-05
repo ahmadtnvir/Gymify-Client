@@ -134,7 +134,7 @@ const TrainerDetails = () => {
                   generation of fitness enthusiasts.
                 </p>
                 <div className=" w-full p-5 flex justify-center">
-                  <Link to={`/`}>
+                  <Link to={`/career`}>
                     <button className="btn relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-[#ac1929] rounded-full shadow-md group">
                       <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#ac1929] group-hover:translate-x-0 ease">
                         <svg

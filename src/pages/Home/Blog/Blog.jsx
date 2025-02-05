@@ -17,7 +17,7 @@ const Blog = () => {
   } = useQuery({
     queryKey: ["blogs"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/blogs");
+      const res = await axiosPublic.get("/blogs?limit=3");
       return res.data;
     },
   });
@@ -64,6 +64,7 @@ const Blog = () => {
             </figure>
             <div className="card-body text-start">
               <h2 className="card-title text-lg font-bold">{blog.title}</h2>
+              <div className="badge badge-neutral">{blog.postedBy}</div>
               <p className="text-gray-600">
                 {blog.description.slice(0, 150)}...
               </p>

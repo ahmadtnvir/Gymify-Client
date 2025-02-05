@@ -1,5 +1,6 @@
 import SectionHeading from "../../../components/SectionHeading";
 import icon from "../../../assets/Images/offers_icon.png";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   return (
@@ -64,11 +65,11 @@ const Pricing = () => {
                 <p className="text-slate-400">No personal training</p>
               </div>
             </div>
-            <div>
+            <Link to={"/payment"}>
               <button className="mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">
                 JOIN NOW
               </button>
-            </div>
+            </Link>
           </div>
           <div className="border border-[#f1374d] rounded-2xl p-8 bg-[#ac1929]">
             <div>
@@ -115,11 +116,11 @@ const Pricing = () => {
                 <p className="text-slate-400">1-on-1 personal training</p>
               </div>
             </div>
-            <div>
+            <Link to={"/payment"}>
               <button className="mt-4 px-6 py-2 bg-white text-[#ac1929] font-bold rounded-lg hover:bg-gray-200 transition-all">
-                GET STARTED
+                JOIN NOW
               </button>
-            </div>
+            </Link>
           </div>
           <div className=" border border-[#6b6a6a] rounded-2xl p-8 bg-black bg-opacity-50">
             <div>
@@ -166,11 +167,11 @@ const Pricing = () => {
                 <p className="text-slate-400">Limited group classes</p>
               </div>
             </div>
-            <div>
+            <Link to={"/payment"}>
               <button className="mt-4 px-6 py-2 bg-[#ac1929] text-white font-bold rounded-lg hover:bg-red-700 transition-all">
                 JOIN NOW
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,12 +1,11 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import Btn from "../../../components/Btn";
 import aboutModel from "../../../assets/Images/about_model.jpg";
 import video from "../../../assets/Images/about_video.mp4";
-import "./about.css";
+import Btn from "../../../components/Btn";
 import SectionHeading from "../../../components/SectionHeading";
-import { LazyLoadImage } from "zenui-image-react";
+import "./about.css";
 
 const About = () => {
   return (
@@ -34,17 +33,11 @@ const About = () => {
 
           {/* Image */}
           <div className="flex-1">
-            {/* <img
+            <img
               className="rounded-xl object-cover w-full h-full"
               src={aboutModel}
               alt="About Model"
-            /> */}
-            <LazyLoadImage
-              className="rounded-xl object-cover w-full h-full"
-              src={aboutModel}
-              alt="About Model"
-              placeholderType="effect"
-              effectType="blur"
+              loading="lazy"
             />
           </div>
 

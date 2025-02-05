@@ -49,7 +49,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/allClasses"}
+          to={"/classes"}
           className="hover:text-white transition-all duration-200"
         >
           All Classes
@@ -57,7 +57,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/community"}
+          to={"/blogs"}
           className="hover:text-white transition-all duration-200"
         >
           Community

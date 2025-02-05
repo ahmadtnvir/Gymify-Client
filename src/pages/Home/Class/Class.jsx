@@ -6,6 +6,7 @@ import Btn from "../../../components/Btn";
 import SectionHeading from "../../../components/SectionHeading";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import "./class.css";
+import { Link } from "react-router-dom";
 
 const Class = () => {
   const axiosPublic = useAxiosPublic();
@@ -17,7 +18,7 @@ const Class = () => {
   } = useQuery({
     queryKey: ["classes"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/classes");
+      const res = await axiosPublic.get("/classes?limit=6");
       return res.data;
     },
   });
@@ -118,7 +119,9 @@ const Class = () => {
       </div>
 
       <div className="flex justify-center items-center mt-4">
-        <Btn content={"View All Classes"}></Btn>
+        <Link to={"/classes"}>
+          <Btn content={"View All Classes"}></Btn>
+        </Link>
       </div>
     </div>
   );
